@@ -1,0 +1,169 @@
+:root {
+    --red: #d01c28;
+    --gray: #2e2e2e;
+    --lightgray: #5A5959
+}
+.hero{
+    max-width: 1141px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh -72px);
+}
+.hero_content{
+    max-width: 595px;
+}
+.hero_image{
+    max-width: 530px;
+}
+
+@keyframes shoes_animation {
+    0% {
+        transform: translateY(0px);
+    }
+    70% {
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero_image img {
+    animation: shoes_animation 2s infinite;
+}
+
+.hero_content h1{
+    text-transform: uppercase;
+    font-size: 108px;
+    font-weight: 800;
+    line-height: 102px;
+}
+.hero_content p{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--lightgray);
+    max-width: 404px;
+}
+.hero_btn{
+    display: flex;
+    gap: 40px;
+}
+.btn1 button{
+    all: unset;
+    border: 1px solid var(--red);
+    padding: 6px 15px;
+    background: var(--red);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn1 button:hover{
+    background-color: transparent;
+    color: var(--lightgray);
+    border: 1px solid var(--lightgray);
+    transition: .3s all linear;
+}
+.btn2 button{
+    all: unset;
+    padding: 6px 15px;
+    background: transparent;
+    color: var(--lightgray);
+    border: 1px solid var(--lightgray);
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn2 button:hover{
+    border: 1px solid var(--red);
+    background: var(--red);
+    transition: .3s all linear;
+    color: #ffffff;
+}
+.shopping {
+    margin-top: 40px;
+}
+.shopping p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.brand_icons {
+    display: flex;
+    gap: 16px;
+  }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero_content h1 {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .hero_content p {
+        font-size: 14px;
+        margin: 0 auto;
+    }
+
+    .hero_image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero_image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero_btn {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn1 button, .btn2 button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero_content h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .hero_content p {
+        font-size: 12px;
+        max-width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .hero_image img {
+        max-width: 100%;
+    }
+
+    .hero_btn {
+        gap: 10px;
+    }
+
+    .btn1 button, .btn2 button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .shopping{
+       
+    }
+    .shopping p {
+        font-size: 14px;
+    }
+}
